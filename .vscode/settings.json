@@ -1,0 +1,97 @@
+{
+  "editor.formatOnPaste": true,
+  "editor.tabSize": 2,
+  "ruby.codeCompletion": "rcodetools",
+  "rspec-debug.bundlerPath": "${workspaceRoot}/bin/bundle",
+  "ruby.intellisense": "rubyLocate",
+  "ruby.pathToBundler": "${workspaceRoot}/bin/bundle",
+  "ruby.useBundler": true,
+  "ruby.useLanguageServer": true,
+  "testExplorer.addToEditorContextMenu": true,
+  "ruby.format": "rubocop",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "restoreTerminals.terminals": [
+    {
+      "splitTerminals": [
+        {
+          "name": "Server",
+          "commands": ["bundle exec rails server"]
+        },
+        {
+          "name": "Rails Console",
+          "commands": ["bundle exec rails console"]
+        }
+      ]
+    },
+  ],
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "EXPECTED",
+      "color": "white",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "#08c18d",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "STEP",
+      "color": "black",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "white",
+      "bold": false,
+      "italic": false
+    }
+  ]
+}

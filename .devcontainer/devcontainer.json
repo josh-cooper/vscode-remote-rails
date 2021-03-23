@@ -1,0 +1,54 @@
+// If you want to run as a non-root user in the container, see .devcontainer/docker-compose.yml.
+{
+	"name": "Existing Docker Compose (Extend)",
+	// Update the 'dockerComposeFile' list if you have more compose files or use different names.
+	// The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+		"../docker-compose.override.yml",
+		"docker-compose.yml"
+	],
+	// The 'service' property is the name of the service for the container that VS Code should
+	// use. Update this value and .devcontainer/docker-compose.yml to the real service name.
+	"service": "app",
+	// The optional 'workspaceFolder' property is the path VS Code should open by default when
+	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
+	"workspaceFolder": "/workspace",
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"terminal.integrated.shell.linux": null
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		// ruby on rails language features (incl erb, haml, yaml, etc.)
+		"craigmaslowski.erb",
+		"hjleochen.rails-nav",
+		"rebornix.ruby",
+		"wingrunr21.vscode-ruby",
+		"redhat.vscode-yaml",
+		"karunamurti.haml",
+		"ecmel.vscode-html-css",
+		"yzhang.markdown-all-in-one",
+		"kaiwood.endwise",
+		// language auto formatting
+		"michelemelluso.code-beautifier",
+		"aliariff.vscode-erb-beautify",
+		// db
+		"cweijan.vscode-mysql-client2",
+		// misc
+		"ethansk.restore-terminals", // run commands and terminals on window open
+		"mutantdino.resourcemonitor", // resource monitor in status bar, good for docker
+		//"connorshea.vscode-ruby-test-adapter", // ui for running tests, causes problems atm
+		"eamodio.gitlens", // extended git features
+	],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Uncomment the next line if you want start specific services in your Docker Compose config.
+	// "runServices": [],
+	// Uncomment the ynext line if you want to keep your containers running after VS Code shuts down.
+	// "shutdownAction": "none",
+	// Uncomment the next line to run commands after the container is created - for example installing curl.
+	"postCreateCommand": "bash .devcontainer/workspace_setup.sh"
+	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
+	// "remoteUser": "vscode"
+}

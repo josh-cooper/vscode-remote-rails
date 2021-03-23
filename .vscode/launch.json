@@ -1,0 +1,59 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Start Rails server",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "/workspace",
+      "program": "/workspace/bin/rails",
+      "args": [
+        "server"
+      ],
+      "useBundler": false,
+      "pathToBundler": "/usr/local/bin/bundle",
+      "showDebuggerOutput": true,
+      "pathToRDebugIDE": "/workspace/bin/rdebug-ide",
+      "env": {
+        "PATH": "/root/.vscode-server/bin/5d424b828ada08e1eb9f95d6cb41120234ef57c7/bin:/usr/local/bundle/bin:/usr/local/bundle/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/workspace/bin",
+        "GEM_HOME": "/usr/local/bundle",
+        "RUBY_VERSION": "2.3.8"
+      }
+    },
+    {
+      "name": "Debug Rails server",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/rails",
+      "args": [
+        "server"
+      ],
+      "useBundler": false,
+      "pathToBundler": "/usr/local/bin/bundle",
+      "showDebuggerOutput": true,
+      "cwd": "${workspaceRoot}",
+      "pathToRDebugIDE": "/workspace/bin/rdebug-ide",
+      "env": {
+        "PATH": "/root/.vscode-server/bin/5d424b828ada08e1eb9f95d6cb41120234ef57c7/bin:/usr/local/bundle/bin:/usr/local/bundle/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/workspace/bin",
+        "GEM_HOME": "/usr/local/bundle",
+        "RUBY_VERSION": "2.3.8"
+      }
+    },
+    {
+      "name": "Attach to rdebug",
+      "type": "Ruby",
+      "request": "attach",
+      "remotePort": "1234",
+      "remoteHost": "0.0.0.0",
+      "remoteWorkspaceRoot": "/workspace",
+      "cwd": "${workspaceRoot}",
+      "showDebuggerOutput": true,
+      "serverReadyAction": {
+
+      }
+    }
+  ]
+}
