@@ -1,0 +1,7 @@
+eval_gemfile "./Gemfile"
+
+group :development, :test do
+  gem 'spring'
+  gem 'rubocop'
+  gem 'spring-commands-rspec'
+end
